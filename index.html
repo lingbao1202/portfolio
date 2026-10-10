@@ -230,6 +230,19 @@ section{position:relative}
 .wz-gal-cap b{color:var(--txt);font-weight:620}
 .wz-gal-src{font-size:11px;color:var(--txt-dim);opacity:.6;margin-top:4px}
 
+/* SECTION: wz-tools */
+.wz-tools{display:flex;flex-direction:column;gap:14px;margin-bottom:6px}
+.wz-tool{display:flex;background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--r-sm);overflow:hidden}
+.wz-tool img{width:58%;height:216px;object-fit:cover;display:block;flex-shrink:0}
+.wz-tool-info{flex:1;padding:16px 18px;display:flex;flex-direction:column;justify-content:center;min-width:0}
+.wz-tool-tag{font-size:10.5px;letter-spacing:1px;color:var(--cy);margin-bottom:7px}
+.wz-tool-info h4{font-size:14.5px;font-weight:650;margin-bottom:6px}
+.wz-tool-info p{font-size:12.4px;color:var(--txt-dim);line-height:1.66}
+@media(max-width:720px){
+  .wz-tool{flex-direction:column}
+  .wz-tool img{width:100%;height:190px}
+}
+
 /* SECTION: ai */
 .ai-flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(178px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-bottom:22px}
 .ai-step{background:var(--bg-soft);padding:19px 17px;position:relative}
@@ -584,7 +597,7 @@ footer{padding:34px 0 40px;border-top:1px solid var(--line);margin-top:64px}
             <li><b>AI 指挥官系统建设</b>：搭建多元角色人设体系，覆盖人设基础信息、背景故事与台词样板，并依据玩家反馈迭代争议人设</li>
             <li><b>灵宝人设与内容建设</b>：推进三层人设迭代（泛用 / 深入 / 情感传递），强化局内互动、玩家回流、灵宝日记等场景的情感传达；搭建灵宝 wiki 与英雄梗辣评内容体系</li>
             <li><b>商业化内容创作监修</b>：皮肤、对局天幕、次元家具及 IP 联动内容的文案包装，含犬夜叉、奥特曼、三星堆、三丽鸥等联动与山海、狼人杀等版本主题；历年生肖限定皮肤（马限、蛇限、羊年等）台词撰写与监修</li>
-            <li><b>世界观内容与 AI 提效</b>：撰写英雄秘闻、人设台词、wiki 等相关内容；搭建世界观知识库问答与台词比对 AI 工具供组内使用，打通组内 AI 辅助创作流程</li>
+            <li><b>世界观内容与 AI 提效</b>：撰写英雄秘闻、人设台词、wiki 等相关内容；搭建知识库问答、台词查重、监修辅助等 AI 工具供组内使用，打通组内 AI 辅助创作流程</li>
           </ul>
           <div class="blk-t">成果锚点</div>
           <div class="pj-grid2">
@@ -615,12 +628,36 @@ footer{padding:34px 0 40px;border-top:1px solid var(--line);margin-top:64px}
               <img src="assets/wz-aotianmu.jpg" alt="奥特曼联动·「光之巨人」天幕官方预览" loading="lazy">
               <div class="wz-gal-cap"><b>奥特曼联动·「光之巨人」天幕</b><br>天幕内容包装监修</div>
             </div>
-            <div class="wz-gal-item">
-              <img src="assets/wz-lingbao-chahua.jpg" alt="灵宝局内插话·局内实战截图（灵宝主动出言提示战局）" loading="lazy" style="object-position:left center">
-              <div class="wz-gal-cap"><b>灵宝局内插话</b><br>灵宝人设与台词体系迭代</div>
-            </div>
           </div>
           <p class="wz-gal-src">以上均为已上线内容的官方公开物料（图源：王者荣耀官网 pvp.qq.com），截取关键要素展示，仅用于个人求职非商业用途，著作权归腾讯所有。</p>
+          <div class="blk-t" style="margin-top:24px">AI 工具图证</div>
+          <div class="wz-tools">
+            <div class="wz-tool">
+              <img src="assets/wz-tool-qa.png" alt="世界观问答智能体「三不先生」界面：基于知识库回答英雄设定问题，附不确定性说明" loading="lazy">
+              <div class="wz-tool-info">
+                <div class="wz-tool-tag">TOOL 01 · 知识库问答</div>
+                <h4>世界观问答智能体「三不先生」</h4>
+                <p>面向组内的英雄世界观知识库问答工具。回答基于检索到的设定资料，无法确证的部分以「不确定性说明」明示，不做硬编。</p>
+              </div>
+            </div>
+            <div class="wz-tool">
+              <img src="assets/wz-tool-dup.png" alt="王者台词查重工具界面：批量上传台词文档并显示查重进度" loading="lazy">
+              <div class="wz-tool-info">
+                <div class="wz-tool-tag">TOOL 02 · 台词查重</div>
+                <h4>王者台词查重</h4>
+                <p>批量比对新写台词与既有台词，支持文档批量上传与英雄指定，避免撞句；单批支持十余组文档排队查重。</p>
+              </div>
+            </div>
+            <div class="wz-tool">
+              <img src="assets/wz-tool-review.png" alt="AI 监修工作台界面：S/A/B 监修分级、待审稿件与资料库检索依据" loading="lazy">
+              <div class="wz-tool-info">
+                <div class="wz-tool-tag">TOOL 03 · 监修辅助</div>
+                <h4>AI 监修工作台</h4>
+                <p>按 S/A/B 监修力度分级，自动检索资料库给出设定依据与反馈文稿，把监修经验沉淀为可复用的工具流程。</p>
+              </div>
+            </div>
+          </div>
+          <p class="wz-gal-src">以上为本人搭建并在组内使用的 AI 工具界面，仅展示功能形态，不含未公开游戏内容。</p>
         </div>
       </div>
     </article>
